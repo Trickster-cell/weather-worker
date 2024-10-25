@@ -1,0 +1,8 @@
+services:
+  worker:
+    build: .
+    env_file: 
+      - .env  # Loads environment variables from the .env file
+    restart: always
+    deploy:
+      replicas: 3  # This will run 3 worker instances in parallel
